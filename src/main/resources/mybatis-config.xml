@@ -16,6 +16,7 @@
         <!--        <setting name="aggressiveLazyLoading" value="true"/> &lt;!&ndash;调用任意方法触发懒加载&ndash;&gt;-->
         <!--        <setting name="returnInstanceForEmptyRow" value="true"/>--><!--是否允许返回空行-->
 <!--        <setting name="configurationFactory" value="org.coderead.mybatis.LazyTest$ConfigurationFactory"/>-->
+        <setting name="lazyLoadTriggerMethods" value="setB"/>
     </settings>
 
     <typeAliases>

@@ -1,11 +1,9 @@
-package resultSetHandlerTest;
+package org.coderead.mybatis.qianTaoQuery;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.coderead.mybatis.UserMapper;
-import org.coderead.mybatis.bean.Blob;
-import org.coderead.mybatis.bean.User;
 import org.coderead.mybatis.bean.User_Blob;
 import org.coderead.mybatis.cacheTest.FirstCacheTest;
 import org.junit.Before;
@@ -15,10 +13,10 @@ import java.sql.SQLException;
 
 /**
  * @Author: 曾祥贺
- * @Date: 2022-08-11 14:40
+ * @Date: 2022-08-16 14:26
  * @Description:
  */
-public class ResultSetHandlerTest {
+public class QueryTest {
     private SqlSessionFactory factory;
     private SqlSession sqlSession;
 
@@ -34,7 +32,7 @@ public class ResultSetHandlerTest {
     @Test
     public void test(){
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-        User_Blob user_blob = mapper.selectUserAndBlob(10);
+        User_Blob user_blob = mapper.selectUserAndBlob2(10);
         System.out.println(user_blob);
     }
 }

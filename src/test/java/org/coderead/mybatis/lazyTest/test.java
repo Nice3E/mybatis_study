@@ -1,11 +1,9 @@
-package resultSetHandlerTest;
+package org.coderead.mybatis.lazyTest;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.coderead.mybatis.UserMapper;
-import org.coderead.mybatis.bean.Blob;
-import org.coderead.mybatis.bean.User;
 import org.coderead.mybatis.bean.User_Blob;
 import org.coderead.mybatis.cacheTest.FirstCacheTest;
 import org.junit.Before;
@@ -15,10 +13,10 @@ import java.sql.SQLException;
 
 /**
  * @Author: 曾祥贺
- * @Date: 2022-08-11 14:40
+ * @Date: 2022-08-17 16:46
  * @Description:
  */
-public class ResultSetHandlerTest {
+public class test {
     private SqlSessionFactory factory;
     private SqlSession sqlSession;
 
@@ -35,6 +33,10 @@ public class ResultSetHandlerTest {
     public void test(){
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
         User_Blob user_blob = mapper.selectUserAndBlob(10);
-        System.out.println(user_blob);
+        user_blob.getBlob();
+//
+//        User_Blob mapper = sqlSession.getMapper(User_Blob.class);
+        //org.apache.ibatis.binding.BindingException: Type class org.coderead.mybatis.bean.User_Blob is not known to the MapperRegistry.
+
     }
 }
