@@ -31,6 +31,7 @@ public class test {
 
     @Test
     public void test(){
+
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
         User_Blob user_blob = mapper.selectUserAndBlob(10);
         user_blob.getBlob();

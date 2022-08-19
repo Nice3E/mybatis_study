@@ -23,6 +23,15 @@
         <package name="org.coderead.mybatis.bean"/>
     </typeAliases>
 
+<!--    <plugins>-->
+<!--        <plugin interceptor="" >-->
+<!--            <property name="" value=""/>-->
+<!--            <property name="" value=""/>-->
+<!--        </plugin>-->
+<!--    </plugins>-->
+
+
+
     <environments default="dev">
         <environment id="dev">
             <transactionManager type="JDBC"/>
@@ -34,7 +43,17 @@
             </dataSource>
         </environment>
     </environments>
+
+    <databaseIdProvider type="DB_VENDOR">
+        <property name="MySQL" value="mysql11" />
+        <property name="Oracle" value="oracle11" />
+    </databaseIdProvider>
+
     <mappers>
         <package name="org.coderead.mybatis" />
+        <mapper
     </mappers>
+
+
+
 </configuration>

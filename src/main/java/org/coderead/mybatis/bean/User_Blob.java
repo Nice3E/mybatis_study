@@ -1,7 +1,10 @@
 package org.coderead.mybatis.bean;
 
+import org.apache.ibatis.type.Alias;
+
 import java.io.Serializable;
 import java.util.Date;
+
 
 public class User_Blob implements Serializable {
     /**
